@@ -6,12 +6,11 @@ DriveFromJoysticks::DriveFromJoysticks() {
 
 // Called just before this Command runs the first time
 void DriveFromJoysticks::Initialize() {
-	shooter->driveFromJoysticks(oi->getJoystick1(), oi->getJoystick2());
 }
 
 // Called repeatedly when this Command is scheduled to run
 void DriveFromJoysticks::Execute() {
-	
+	shooter->driveFromJoysticks(oi->getJoystick1(), oi->getJoystick2());
 }
 
 // Make this return true when this Command no longer needs to run execute()

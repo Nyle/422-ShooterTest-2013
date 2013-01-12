@@ -13,8 +13,8 @@ void Shooter::InitDefaultCommand() {
 }
 
 void Shooter::driveFromJoysticks(Joystick *joystick0, Joystick *joystick1) {
-	motor0->Set(joystick0->GetX());
-	motor1->Set(joystick1->GetX());
+	motor0->Set(joystick0->GetY());
+	motor1->Set(joystick1->GetY());
 }
 
 

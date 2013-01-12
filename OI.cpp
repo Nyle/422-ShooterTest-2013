@@ -1,8 +1,8 @@
 #include "OI.h"
 
 OI::OI() {
-	joystick1 = new Joystick(JOYSTICK_1);
-	joystick2 = new Joystick(JOYSTICK_2);
+	joystick1 = new Joystick(1);
+	joystick2 = new Joystick(2);
 }
 
 Joystick * OI::getJoystick1(){
