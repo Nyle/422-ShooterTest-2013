@@ -1,13 +1,20 @@
 #include "Shooter.h"
 #include "../Robotmap.h"
+#include "../Commands/DriveFromJoysticks.h"
 
-Shooter::Shooter() : Subsystem("Shooter") {
-	
+Shooter::Shooter() : 
+Subsystem("Shooter") {
+	motor0 = new Talon(MOTOR_0);
+	motor1 = new Talon(MOTOR_1);
 }
     
 void Shooter::InitDefaultCommand() {
-	// Set the default command for a subsystem here.
-	//SetDefaultCommand(new MySpecialCommand());
+	SetDefaultCommand(new DriveFromJoysticks());
+}
+
+void Shooter::driveFromJoysticks(Joystick *joystick0, Joystick *joystick1) {
+	motor0->Set(joystick0->GetX());
+	motor1->Set(joystick1->GetX());
 }
 
 
