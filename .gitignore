@@ -18,3 +18,17 @@
 *.wrproject
 *.wrmakefile
 *.wrmakeproject
+
+# Binaries
+PPC32diab/
+PPC603gnu/
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
