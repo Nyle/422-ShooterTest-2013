@@ -1,6 +1,7 @@
 #ifndef SHOOTER_H
 #define SHOOTER_H
 #include "WPILib.h"
+#include "Wheel.h"
 
 /**
  *
@@ -9,8 +10,8 @@
  */
 class Shooter : public Subsystem {
 private:
-	Talon *motor0;
-	Talon *motor1;
+	Wheel *wheel0;
+	Wheel *wheel1;
 public:
 	Shooter();
 	void InitDefaultCommand();

@@ -4,8 +4,8 @@
 
 Shooter::Shooter() : 
 Subsystem("Shooter") {
-	motor0 = new Talon(MOTOR_0);
-	motor1 = new Talon(MOTOR_1);
+	wheel0 = new Talon(MOTOR_0, ENCODER_0_A, ENCODER_0_B);
+	wheel1 = new Wheel(MOTOR_1, ENCODER_1_A, ENCODER_1_B);
 }
     
 void Shooter::InitDefaultCommand() {
@@ -13,10 +13,6 @@ void Shooter::InitDefaultCommand() {
 }
 
 void Shooter::driveFromJoysticks(Joystick *joystick0, Joystick *joystick1) {
-	motor0->Set(joystick0->GetY());
-	motor1->Set(joystick1->GetY());
+	wheel0->SetSpeed(joystick0->GetY());
+	wheel1->SetSpeed(joystick1->GetY());
 }
-
-
-// Put methods for controlling this subsystem
-// here. Call these from Commands.
